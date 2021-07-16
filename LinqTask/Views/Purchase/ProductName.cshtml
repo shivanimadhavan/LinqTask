@@ -1,0 +1,36 @@
+﻿
+
+@model IEnumerable<LinqTask.Models.ListOfPurchase>
+
+@{ ViewBag.Title = "ProductNameAsc"; }
+
+<h2 class="text-center text-uppercase">Product Name in Ascending Order</h2>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <div class="container-fluid py-4">
+
+        <table class="table table-striped table-bordered">
+
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th>Product Name</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.product.ProductName</td>
+
+                    </tr>
+}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
